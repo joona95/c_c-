@@ -1,2 +1,2 @@
-# c_c-
+# c_c++
 studying for c language &amp; c++ language
