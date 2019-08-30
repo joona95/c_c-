@@ -1,0 +1,697 @@
+1강. Hello, World!
+#include <stdio.h>
+int main(){
+printf("Hello, World!\n");
+}
+
+2강. Hello, World! 해석하기
+3강. printf로 다양한 데이터 출력하기
+%d:정수출력
+%f:실수출력
+%c:문자출력 (알파벳, 숫자, 기호, \n) - 한글, 한자, 유니코드x
+%s:문자열출력
+%g:실수출력(지수형태로)
+
+4강. 변수란?
+5강. 자료형
+비트: 데이터의 최소 단위
+8비트 = 1바이트
+바이트: 컴퓨터에서 데이터를 처리하는 가장 작은 단위
+
+자료형 - 정수형, 실수형
+정수형
+char(1바이트) - 문자 담는 데 쓰임
+short(2바이트)
+long(4바이트)
+long long (8바이트)
+int (시스템에 따라서 자동결정, 대체로 long)
+실수형
+float(4바이트)
+double(8바이트)
+
+unsigned, signed
+
+void: 리턴값이 없는 함수의 자료형
+
+bool: 참, 거짓을 저장 (char를 쓰는거랑 똑같음 )
+
+6강. sizeof 연산자와 형변환
+sizeof(x): x의 크기 알려줌
+x: 형(int, float, ...), 변수이름
+형변환: 자료형을 다른 자료형으로 바꾸는 작업
+정수 / 정수 = 정수
+실수 / 정수 = 실수
+실수 / 실수 = 실수
+
+7강. 입력받기
+scanf
+&: 포인터
+
+8강. char형과 ASCII코드 
+American Standard ...
+9강. 1부(입출력과 변수) 종합문제
+
+10강. 변수로 연산하기(1)
+산술연산자: 수학적인 연산 (+ - * / % = += -= *= /= %= ++ --)
+=: 대입연산
+전치와 후치
+
+11강. 변수로 연산하기(2)
+비교연산자
+참:1, 거짓:0
+==: 같다, >=, <=, !=:다르다
+bool: 진리값을 저장용 변수 (1바이트)
+논리연산자 (그리고, 또는, ...)
+&& || ! 
+
+12강. 경우 나누기: if, else if, else
+13강. if문 잘쓰기
+중첩 if문
+중괄호 코딩 스타일
+
+14강. switch와 goto문
+int choice;
+switch(choice) {
+case 1: break;
+case 2: break;
+default: break;
+}
+
+makeChoice: ...
+goto makeChoice;
+
+15강. 반복하기
+반복문 (while, do-while)
+
+16강.for문(1)
+for(초기화;조건;증감식)
+일정하게 증가/감소되는 변수가 필요할 때
+배열의 모든 원소에 순차적으로 접근하고 싶을 때
+특정 횟수만큼 작업을 반복하고 싶을 때
+17강.for문(2)
+조건생략 = true간주
+초기화 생략 가능, 2개 이상 사용 가능
+18강.for문(3)
+break: 반복문 한개를 빠져나옴
+continue
+중첩 for문
+
+19강. 2부(연산자와 제어문) 종합문제
+
+20강. 배열 array
+sizeof(arr)/sizeof(int)
+
+21강. 배열을 활용해보자
+입력받은 숫자들을 거꾸로 출력
+최대, 최소
+짝수의 개수
+
+22강. 2차원 배열
+다차원 배열
+
+23강. 문자열: 문자들이 열거
+char arr[] = "Hello, World!";
+%s
+'\0'
+#include <string.h>
+int len = strlen(str);
+strcpy(a, b) a에 b를 복사
+strcat(a, b) a에 b 덧붙이기
+int cmp = strcmp(a, b) 
+cmp == -1 a가 b보다 사전순먼저
+0 a와 b같다
+1 a가 b보다 사전순이후 
+
+24강. 변수 가리키기 (포인터)
+포인터(pointer): 변수의 주소를 저장하는 변수
+
+25강. 배열과 포인터와의 관계
+int arr[3];
+int *ptr = arr;
+arr == &arr[0]
+arr+1 == &arr[1]
+
+26강. 배열 가리키기 (배열 포인터)
+arr[i] = *(arr+i) ==*(ptr+i) == *(i+ptr)==i[ptr]
+ptr == &prt[0]
+*ptr == ptr[0]
+ptr + 1 == ptr에 sizeof(*ptr)을 더한 값
+
+배열포인터 : int (*ptr_arr)[3]; 
+길이 3인 int형 배열을 가리키는 포인터를 선언
+
+27강. 2차원 배열과 배열 포인터
+arr == &arr[0]
+*arr == arr[0]
+ptr+1 == ptr에 sizeof(*ptr)를 더한 값
+
+ptr[i] ==arr[i]
+ptr[i][j] == arr[i][j]
+ptr == arr
+
+28강. 포인터 배열
+배열 포인터: 배열을 가리키는 포인터
+포인터 배열 : 포인터들이 배열
+
+29강. 3부(배열과 포인터) 종합문제
+30 10 10
+100
+112 1 116 5 120 9 124 2
+
+30강. 3부(배열과 포이터) 종합문제-2
+31강. 함수를 만들어보자
+매개변수
+32강. 함수의 반환
+return: 돌려주다, 반환
+
+33강. call-by-value와 call-by-reference
+call-by-value
+call-by-reference
+int tmp=a; a=b; b=tmp;
+함수 매개변수 -> 값이 넘어감
+포인터 매개변수 : call-by-reference
+매개변수 레퍼런스 변수
+
+34강. 프로토타입
+prototype: 원형, 시제품
+void walk(int distance){ ... }
+void rotate(int angle){ ... }
+void drawSquare(){
+for(int i=1;i<=4;i++){
+	walk(10);
+	rotate(90);
+}}
+함수 순서 조정 필요 -> 프로토타입 : 함수선언순서 신경안써도됨
+void walk(int distance); //void walk(int);
+void rotate(int angle); //void rotate(int); 타입만 적는것도 가능
+int main(){ ... }
+void walk 정의
+void rotate 정의
+
+35강. 재귀함수
+recursion
+팩토리얼 (5! = 5*4*3*2*1 = 120) 
+n! = n * (n-1)!
+
+36강. 배열을 매개변수로 넘기기
+call-by-value:값만 전달
+call-by-reference:참조
+int *arr == int arr[4] : call-by-reference
+int arr[2][3] == int (*arr)[3] : call-by-reference
+
+37강. 4부(함수) 종합문제
+
+38강. typedef
+type define
+형을 정의
+typedef int Int32;
+Int32 n = 20;
+typedef int Pair[2];
+Pair point = {3, 4}; // int point[2] = {3, 4};
+typedef char *String;
+String name = "Doodle"; //char *name = "Doodle";
+
+39강. 구조체 만들기
+typedef struct {int x, y;} Point;
+Point p;
+p.x = 3;
+p.y = 4;
+여러개 변수를 한개의 이름으로 묶어버리기
+struct{int x, y;} p;
+typedef 생략 가능 => struct Point {int x, y;};
+구조체는 주로 전역변수 많이 사용
+
+40강. 구조체와 메모리
+struct ProductInfo{ int num; char name[100]; int cost; };
+ProductInfo myProduct = {4797283, "제주 한라봉", 19900}; <= 배열처럼 초기값 대괄호로 줄 수 있음
+
+41강. 구조체 가리키기
+구조체 포인터
+ProductInfo *ptr_product = &myProur;
+ptr_product->num == (*ptr_product).num
+함수->call by value
+void productSwap(ProductInfo *a, Prodct *b){
+ProductInfo  tmp = *a;
+*a = *b;
+*b = *tmp;
+
+42강. 구조체에 함수 집어넣기
+struct Time { int h, m, s; }
+int main{ Time t = {1, 22, 48}; }
+totalSec()
+
+43강. 5부(구조체) 종합 문제
+
+44강. 상수 만들기
+상수 : 변하지 않는 수
+변수 : 변할 수 있는 수
+const, 매크로, enum
+#define PI 3.14159 : 매크로
+enum EGameState { GAMESTATE_MAINMENU=0, GAMESTATE_PLAY=1, GAMESTATE_PAUSED=2, GAMESTATE_GAMEOVER=3  };
+enum EGameState { GAMESTATE_MAINMENU, GAMESTATE_PLAY, GAMESTATE_PAUSED, GAMESTATE_GAMEOVER  }; 자동으로 0부터
+enum EGameState { GAMESTATE_MAINMENU, GAMESTATE_PLAY, GAMESTATE_PAUSED=4, GAMESTATE_GAMEOVER  }; : 0 1 4 5 유연하게
+int currState 대신 EGameState currState 가능
+
+45강. 매크로 자세히 알아보기
+#define
+숫자 뿐만 아니라 일반적인 식도 가능
+#define PRINT_HELLO printf("Hello");
+#define SQUARE(X) X*X
+100 / SQUARE(a) : 100 / a * a (a=5)
+100 / (SQUARE(a)) -> #define SQUARE(X) (X*X) 더 안전
+SQUARE(a-1) : a - 1 * a - 1 -> #define SQUARE(X) ((X)*(X)) 더 안전
+? : 삼항연산자
+(a>b) ? a : b
+#define MAX(A,B) (((A) > (B)) ? (A) : (B))
+#define FOR(I,S,E) for(int I=S; I<=E; I++)
+FOR(i, 1, 10) { ... }
+#define LOOP while(true)
+
+46강. 비트 연산
+논리 연산 && || !
+비트 논리 연산 & | ^ ~
+^ : 둘다 다를때 1 같을때 0
+시프트(shift) 연산 : 옮기다
+빈공간은 채워준다
+<< >>
+더 커다란 자료형으로 자동으로 바꿔줌
+
+47강. 파일 입출력
+FILE *in, &out; //스트림
+int n;
+in = fopen("input.txt", "r");
+out = fopen("output.txt", "w");
+없는 파일을 열려고할때 null 반환 => if(in != nullptr){ ... }
+"a" : append 파일안에 들어있던 내용이 유지됨 그 뒤에 출력
+"w" : 파일안에 들어있던 내용이 다 지워짐
+while(!feof(in)) { ... } :파일을 끝까지 읽었을때 true반환 
+while(fscanf(in, "%c", &ch)!=EOF) { ... }
+fscanf(in, "%d", &n);
+fprintf(out, "%d\n", n);
+열수있는 파일갯수 한계가 있음
+fclose(in);
+fclose(out);
+
+48강. 유용한 함수들
+getchar / putchar
+gets / puts
+char ch;
+ch = getchar();
+putchar(ch);
+
+char str[100];
+gets_s(str);
+puts(str);
+//scanf printr보다 빠르니까 많은 양을 입출력해야할 때 사용
+
+sscnaf / sprintf
+char str[] = "450";
+int n;
+sscanf(str, "%d", &n);
+int n = 450;
+char str[100];
+sprintf(str, "%d", n);
+
+//난수
+#include <stdlib.h>
+printf("%d\n", rand()%10+1);
+#include <time.h>
+printf("%d\n", time(NULL)); // 1970/01/01 00:00:00로부터 지난 시간, 초 단위
+
+//exit(0); 프로그램을 그자리에서 종료 시켜버리는 것
+
+49강. C++ 스타일 입출력
+#include <iostream>
+using namespace std;
+int main(){
+(std::)cout << "Hello, World!"<< 10 << 'c' << (std::)endl;
+
+int a, b;
+cin >> a >> b;
+cout << a << "+" << b << "=" << a+b << endl;
+}
+<<: 출력할 데이터 분리
+std::endl == '\n'
+
+namespace : 성
+namespace a{int n;}
+namespace b{int n;}
+a::n
+b::n
+
+#include <string>
+string str = "안녕하세요" + "hello";
+
+50강. C++ 스타일 기본 문법
+int a(10);
+int a = 10;
+int b(a+5);
+
+범위 기반 for문
+int arr[10]={3,1,4,1,5,9,2,6,5,3};
+for(int n : arr) {
+cout << n <<endl;
+}
+int &n : 레퍼런스 변수
+r-value : int &&r1
+
+51강. C++ 스타일 함수
+over load
+default 매개변수 : default값을 오른쪽부터 줘야한다
+
+52강. 7부 (C++ 스타일 프로그래밍) 종합문제
+
+53강. 네임스페이스
+namespace doodle { 
+int n;
+void set();
+}
+
+네임스페이스 뒤에 또 선언 가능
+namespace doodle{
+void set(){doodle::n=20;}
+}
+
+void doodle::set(){ ... } 이런식으로도 선언 가능
+
+namespace doodle{
+ namespace google{
+ }
+}
+doodle::google::...
+
+컴파일러가 식별자 어떤방식으로 식별하는지
+
+54강. 클래스 == 구조체??
+struct
+class
+struct와 class의 차이점: struct는 private없으면 기본적으로 public 특성 가짐, class를 사용하면 기본적으로 private속성 가짐.
+클래스 = 자료저장+자료처리=변수+함수
+클래스(타입): 특정한 용도를 수행하기 위한 변수와 함수를 모아 둔 틀(자료형)
+객체(오브젝트): 그 틀을 이용하여 찍어낸 개체(변수, 메모리 상의 공간)
+private, protected, public
+캡슐화
+
+55강. this 포인터
+this: 객체의 주솟값
+객체 바깥에 함수가 존재
+this라는 보이지 않는 포인터를 함수의 매개변수로 받는것
+
+56강. 객체의 생성과 소멸
+생성자: 객체가 생성될 때 자동으로 호출되는 함수
+소멸자: 객체가 소멸될 때 자동으로 호출되는 함수
+class MyClass{
+public:
+	MyClass(){ //생성자
+	} 
+
+	~MyClass(){ //소멸자
+	}
+}
+default 생성자 소멸자
+생성자: 멤버 변수 초기화
+소멸자: 메모리 해제
+복소수(real실수, imaginary허수)
+생성자 오버로딩
+Complex c1;
+Complex c2 = Complex(2, 3);
+Complex c3(2, 3);
+Complex c4 = {2, 3};
+Complex c5 = Complex{2, 3};
+Complex c6{2, 3};
+
+57강. 생성자의 다양한 사용 방법
+생성자도 일종의 함수 -> 오버로딩 가능, default 매개변수
+초기화 목록 Complex() : real(0), imag(0) { }
+	Complex(double real, double imag) : real(real_), imag(imag_) { }
+시h 분m 초s
+생성자 위임
+Time() : h(0), m(0), s(0) { }
+Time(ins s_) : Time() { s = s_; }
+Time(int m_, int s_) : Time(s_) { m = m_; }
+Time(int n_, int m_, int s_) : Time(m, s_) { h = h_; }
+
+58강. 정적 멤버(1)
+static: 정적 <-> 동적(객체)
+클래스 내 private필드 접근 가능
+static Color mixColors(Color a, Color b){ ... }
+정적멤버 메서드에서는 비정적 멤버 변수에 접근할수 없다
+
+59강. 정적 멤버(2)
+Color(): r(0), g(0), b(0), id(*idCounter++) { }
+class이름자체가 namespace처럼 작동
+class Color { static int idCounter; } <-전역변수를 class안으로 집어넣기
+int Color::idCounter=1; 선언과 정의를 분리
+전역변수 최대한 지양
+
+60강. 상수형 매개변수와 상수형 메서드
+const
+1. 매개변수의 상수화 (모든 함수)
+2. 메서드의 상수화 (멤버 메서드)
+int viewMoney() const { ... } 멤버변수 못바꾸게
+void Deposit(const int d){ ... }
+const int viewMoney() { ... } return타입자체가 상수형
+const_cast<변환할 형> : const에서 변경가능한 변수로 변함
+
+61강. 멤버 메서드 활용하기
+벡터: 실수 두개를 묶음
+실수*벡터
+벡터*벡터(내적)=실수
+멤버 메서드의 선언, 정의 분리하기
+Vector2();
+Vector2(float x, float y);
+float GetX() const;
+float GetY() const;
+Vector2::Vector2() : x(0), y(0) { }
+Vector2::Vector2(float x, float y) : x(x), y(y) { }
+float Vector2::GetX() const { return x; }
+float Vector2::GetY() const { return y; }
+
+62강. 연산자 오버로딩
+Vector2 operator+(const Vector2) const;
+Vector2 operator-(const Vector2) const;
+Vector2 operator*(const float) const;
+Vector2 operator/(const float) const;
+float operator*(const Vector2) const;
+Vector2 Vector2::operator+(const Vector2 rhs) const { return Vector2(x+rhs.x, y+rhs.y); }
+Vector2 Vector2::operator-(const Vector2 rhs) const { return Vector2(x-rhs.x, y-rhs.y); }
+Vector2 Vector2::operator*(const float rhs) const { return Vector2(x*rhs, y*rhs); }
+Vector2 Vector2::operator/(const float rhs) const { return Vector2(x/rhs, y/rhs); }
+float Vector2::operator*(const Vector2 rhs) const { return x*rhs.x + y*rhs.y; }
+Vector2 c = a + b;
+...
+Vector2 operator*(const float a, const Vector2 b) {
+	return Vector2(a*b.getX(), a*b.GetY());
+}
+ 
+63강. 8부 (클래스) 종합문제 - 1 
+
+64강. 8부 (클래스) 종합문제 - 2
+
+65강. 동적 할당
+동적 할당 : 유동적으로 메모리 할당. 프로그램 실행 중에 변수를 메모리에 할당하는 것.
+정적 할당: int a;
+int a = int(5);
+int *a = new int(5); 
+new: 주소값넘겨줌
+delete a;
+cin>>len;
+int *arr = new int[len];
+delete[] arr;
+
+66강. 깊은 복사와 얕은 복사 (1)
+int *a = new int(5);
+int *b = new int(3);
+a = b //얕은 복사 (참조만 복사)
+*a = *b //깊은 복사 (값을 복사)
+delete a;
+delete b;
+strlen();
+strcpy(덮어쓰여질문자열, 덮어쓸문자열);
+
+67강. 깊은 복사와 얕은 복사 (2) - 복사생성자 오버로딩
+void* : 주소값만 갖는것
+복사생성자: 오버로딩으로 만들어주지않으면 얕은복사 일어나서 소멸시 중복해서 해제되면서 에러발생가능
+String s2(s1);
+String s2 = s1; 
+String(String rhs) : X
+String(String& rhs) : O
+
+68강. 깊은 복사와 얕은 복사 (3) - 대입 연산자 오버로딩
+String s3;
+s3 = s1;
+s3.operator=(s1);
+반환타입 레퍼런스 : return시 객체복사 되므로 한번 줄일수있음
+String &operator=(const String& rhs){
+	delete[] strData;
+	...
+	return *this;
+}
+s3.operator=(s3);
+if(this == &rhs){ ... }
+
+69강. 깊은 복사와 얕은 복사 (4) - 이동 시맨틱
+임시객체
+굳이 깊은 복사 필요?
+res -> 임시객체 -> a 
+얕은복사를 하되 소멸자 한번만 호출되도록 : 이동 시맨틱
+r-value: 오른쪽에만 올수있는값 수정할수없는값
+l-value: 오른쪽도 왼쪽도 올수있는값
+임시객체는 r-value
+String &&r = getName();
+&&: r-value 참조자
+
+70강. 깊은 복사와 얕은 복사 (5) - 이동 생성자와 이동 대입 연산자
+String(String &&rhs){
+	len = rhs.len;
+	strData = rhs.strData;
+	rhs.strData = NULL;
+}
+임시객체가 깊은복사없이 res를 임시객체로 얕은복사 : 임(res);
+res는 l-value인데 왜 String(String &&rhs) 호출되는가? return res; 호출되는동안은 r-value로 된다
+const 붙이면 r-value 받을 수 있음
+String &operator=(String &&rhs) {
+	len = rhs.len
+	strData = rhs.strData;
+	rhs.strData=NULL;
+	return *this;
+}
+a = 임시객체 일때 호출
+
+71강. 묵시적 형변환 (1)
+묵시적(암시적) 형변환 implicit conversion
+명시적 형변환 explicit conversion
+Item i1 = Item(1);
+Item i2(2);
+Item i3 = 3;
+i3 = 3; 변환생성자 호출하여 임시객체 형성 후 i3에 대입연산자로 
+//묵시적 변환
+Item i4 = (Item)4;
+//명시적 변환
+변환 생성자
+Item i5(5);
+i5 = (string)"stone";
+Item i6(1, "grass");
+Item i7 = {2, "dirt"};
+i7 = {2, "dirt"}; //c++11
+Item i8{3, "wood"};
+
+72강. 묵시적 형변환 (2)
+형변환도 연산자
+operator int() const{
+	return num;
+} //int로의 형변환 연산자 오버로딩
+int itemNum1 = (int)i8;
+int itemNum2 = i7;
+operator string() const{
+	string str = to_string(num)+" : "+name;
+	return str;
+}
+println((string)i8); //명시적 형변환
+println(i8); //묵시적 형변환
+변환생성자에 explicit 붙여주면 묵시적 변환 에러가 뜸
+
+73강. 9부 종합문제 1 (동적할당과 객체 복사)
+char str[] = "Hello, World!";
+char *p_str = str;
+cout<< p_str<<endl;
+cout<< *p_str<<endl;
+& x & x * & ** * & *
+레퍼런스는 한번 초기화되면 자기가 가리키는 값을 바꿀수없음
+int &r = b;
+r = a; // b에 a를 넣으라는 표현이 됨
+
+74강. 9부 종합문제 2 (동적할당과 객체 복사)
+//복사 생성자 구현 깊
+Polygon(const Polygon& rhs) : nPoints(nPoints) {
+	points = new Point[nPoints];
+	for(int i=0;i<nPoint; i++)
+		points[i] = rhs.points[i];
+}
+
+//이동 생성자 구현 얕
+Polygon(Polygon&& rhs) : nPoints(nPoints) {
+	points = rhs.points;
+	rhs.points = NULL;
+}
+
+//복사 대입 연산자 구현 깊
+Polygon &operator=(const Polygon &rhs){
+	if(this!=&rhs){
+		delete[] points;
+		nPoints = rhs.nPoints;
+		points = new Point[nPoints];
+		for(int i=0;i<nPoint;i++)
+			points[i] = rhs.points[i];
+	}
+	return *this;
+}
+
+//이동 대입 연산자 구현 얕
+Polygon &operator=(Polygon &&rhs){
+	if(this!=&rhs){
+		delete[] points;
+		nPoints = rhs.nPoints;
+		points = rhs.points;
+		rhs.points = NULL;
+	}
+	return *this;
+}
+
+75강. 상속과 접근 제어
+자식클래스가 부모클래스에 포함됨 (자식 ⊂ 부모)
+부모클래스를 c언어에서는 base라고함
+파생 derived
+class Base {
+public:
+	void bFunc() { ... }
+	int bNum;
+
+protected : 
+	int bProtected;
+private:
+	int bPrivate;
+};
+class Derived : public Base {
+public:
+	void dFunc() { ... }
+	int dNum;
+private: 
+	int dPrivate;
+};
+접근제어 
+public: 외부접근o, 자식클래스 o
+protected: 외부접근 x, 자식클래스 o
+private: 외부접근x, 자식클래스 x
+
+
+76강. 상속이 필요한 이유 (1)
+메시지
+-텍스트
+-이미지
+get 함수에는 const 있는게 좋음
+Message(int sendTime, string sendName) { ... }
+TextMessage(int sendTime, string sendName, string text) : Message(sendTime, sendName) { ... }
+ImageMessage(int sendTime, string sendName, Image *image) : Message(sendTime, sendName) { ... }
+위임생성자 문법 비슷
+
+77강. 오버라이딩과 정적 바인딩
+override : 우선하다
+d.a 부모보다 자신에게 선언된 걸 우선한다
+d.Base::a
+d.Derived::a
+overload 함수 때
+overwrite : 덮어쓰다
+Base 남자 Derived 총각
+Derived d;
+Base *b = &d;
+Base *b = new Derived();
+b-> Print(); // Base의 Print 실행될까? Derived의 Print 실행될까? Base 실행!
+delete b;
+c++은 기본적으로 정적 바인딩
+정적바인딩: base 포인터로 다른 객체 가리키고 있을때 base를 가리키고 있다고 가정하고 base에 있는것을 호출
+동적바인딩: base 포인터로 다른 객체 가리키고 있을 때 동적으로 가능
+
+78강. 가상 함수와 동적 바인딩
+base의 함수에 virtual 붙이기 //가상 함수 -> 동적 바인딩
+virtual : 이 함수가 호출이 될 수도 있고 안될 수도 있다

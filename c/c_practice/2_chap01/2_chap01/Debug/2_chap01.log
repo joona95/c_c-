@@ -1,0 +1,5 @@
+﻿  2_chap01.c
+c:\users\hyurs\desktop\프로그래밍\c\2_chap01\2_chap01\2_chap01.c(94): warning C4477: 'printf' : 서식 문자열 '%x'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'char *'입니다.
+c:\users\hyurs\desktop\프로그래밍\c\2_chap01\2_chap01\2_chap01.c(97): warning C4477: 'printf' : 서식 문자열 '%x'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+c:\users\hyurs\desktop\프로그래밍\c\2_chap01\2_chap01\2_chap01.c(100): warning C4477: 'printf' : 서식 문자열 '%x'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double *'입니다.
+  2_chap01.vcxproj -> C:\Users\hyurs\Desktop\프로그래밍\c\2_chap01\Debug\2_chap01.exe

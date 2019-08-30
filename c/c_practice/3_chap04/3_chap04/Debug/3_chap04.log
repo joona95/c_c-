@@ -1,0 +1,6 @@
+﻿  3_chap04.c
+c:\users\hyurs\desktop\프로그래밍\c\3_chap04\3_chap04\3_chap04.c(29): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+c:\users\hyurs\desktop\프로그래밍\c\3_chap04\3_chap04\3_chap04.c(36): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'char *'입니다.
+c:\users\hyurs\desktop\프로그래밍\c\3_chap04\3_chap04\3_chap04.c(43): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'float *'입니다.
+c:\users\hyurs\desktop\프로그래밍\c\3_chap04\3_chap04\3_chap04.c(44): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+  3_chap04.vcxproj -> C:\Users\hyurs\Desktop\프로그래밍\c\3_chap04\Debug\3_chap04.exe

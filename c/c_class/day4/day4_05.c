@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <windows.h>
+int main()
+{
+    int i=0;
+    while(1)
+    {
+        printf("¹Ýº¹ È½¼ö : %d \n", i);
+        i++;
+        Sleep(100); //1000 1ÃÊ
+
+        if(i ==100)
+            break;
+    }
+
+    return 0;
+}
